@@ -1,0 +1,276 @@
+
+@Main @Scenario1
+Scenario Outline: Validate SalesForce login functionality for valid user credentials [90m# src/test/java/com/metlife/features/Commerce.feature:10[0m
+  [32mGiven [0m[32mOpen browser and launch SalesForce application[0m                               [90m# com.metlife.stepsdefinition.LoginModule.open_browser_and_launch_sales_force_application()[0m
+  [32mWhen [0m[32mEnter valid [0m[32m[1m"fawwaz123@gmail.com"[0m[32m and [0m[32m[1m"fahad123"[0m                              [90m# com.metlife.stepsdefinition.LoginModule.enter_valid_and(java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mFor valid credentials user should login into application[0m                      [90m# com.metlife.stepsdefinition.LoginModule.for_valid_credentials_user_should_login_into_application()[0m
+
+@Main @Scenario2
+Scenario: Validate user's navigation to Commerce module [90m# src/test/java/com/metlife/features/Commerce.feature:13[0m
+  [32mWhen [0m[32mClick on hamberger menu[0m                          [90m# com.metlife.stepsdefinition.NavigateToCommerceModule.click_on_hamberger_menu()[0m
+  [32mAnd [0m[32mClick on View All link[0m                            [90m# com.metlife.stepsdefinition.NavigateToCommerceModule.click_on_view_all_link()[0m
+  [32mAnd [0m[32mEnter [0m[32m[1m"Commerce"[0m[32m in search box[0m                    [90m# com.metlife.stepsdefinition.NavigateToCommerceModule.enter_in_search_box(java.lang.String)[0m
+  [32mThen [0m[32mClick on Commerce link[0m                           [90m# com.metlife.stepsdefinition.NavigateToCommerceModule.click_on_commerce_link()[0m
+
+@Main @Scenario3
+Scenario: Validate user's navigation to Accounts section     [90m# src/test/java/com/metlife/features/Commerce.feature:20[0m
+  [32mWhen [0m[32mClick on Task Menu to see Accounts option[0m             [90m# com.metlife.stepsdefinition.NavigateToAccountSection.click_on_task_menu_to_see_accounts_option()[0m
+  [32mThen [0m[32mClick on Accounts option to navigate to Accounts page[0m [90m# com.metlife.stepsdefinition.NavigateToAccountSection.click_on_accounts_option_to_navigate_to_accounts_page()[0m
+
+@Main @Scenario4
+Scenario: Validate new account creation in Accounts section [90m# src/test/java/com/metlife/features/Commerce.feature:25[0m
+  [32mWhen [0m[32mClick on new button in Accounts section[0m              [90m# com.metlife.stepsdefinition.CreateAccountSection.click_on_new_button_in_accounts_section()[0m
+  [32mAnd [0m[32mEnter account name as [0m[32m[1m"Dev1Account"[0m                   [90m# com.metlife.stepsdefinition.CreateAccountSection.enter_account_name_as(java.lang.String)[0m
+  [32mAnd [0m[32mClick on save button to save new account[0m              [90m# com.metlife.stepsdefinition.CreateAccountSection.click_on_save_button_to_save_new_account()[0m
+  [32mAnd [0m[32mClose new created account window[0m                      [90m# com.metlife.stepsdefinition.CreateAccountSection.close_new_created_account_window()[0m
+  [32mThen [0m[32mRefresh the browser to view new created account[0m      [90m# com.metlife.stepsdefinition.CreateAccountSection.refresh_the_browser_to_view_new_created_account()[0m
+
+@Main @Scenario5
+Scenario: Navigate to Home section to view all records in Recent Records section [90m# src/test/java/com/metlife/features/Commerce.feature:33[0m
+  [32mWhen [0m[32mClick on Task Menu to see Home option[0m                                     [90m# com.metlife.stepsdefinition.ViewAllRecentRecordsSection.click_on_task_menu_to_see_home_option()[0m
+  [32mAnd [0m[32mClick on Home option to see all recent records[0m                             [90m# com.metlife.stepsdefinition.ViewAllRecentRecordsSection.click_on_home_option_to_see_all_recent_records()[0m
+  [32mAnd [0m[32mClick on View All Recent Records link on Home page to view recent records[0m  [90m# com.metlife.stepsdefinition.ViewAllRecentRecordsSection.click_on_view_all_recent_records_link_on_home_page_to_view_recent_records()[0m
+  [32mAnd [0m[32mClose Recent Records window[0m                                                [90m# com.metlife.stepsdefinition.ViewAllRecentRecordsSection.close_recent_records_window()[0m
+  [32mAnd [0m[32mClick on Task Menu to view Accounts option[0m                                 [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_task_menu_to_view_accounts_option()[0m
+  [32mThen [0m[32mClick on Accounts option to land on Accounts page[0m                         [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_accounts_option_to_land_on_accounts_page()[0m
+
+@Main @Scenario6
+Scenario: Validate account edit functionality in Accounts section   [90m# src/test/java/com/metlife/features/Commerce.feature:42[0m
+  [32mWhen [0m[32mClick on account check box to select an account[0m              [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_account_check_box_to_select_an_account()[0m
+  [32mAnd [0m[32mOpen account edit section to edit first existing account[0m      [90m# com.metlife.stepsdefinition.EditAddAccountSection.open_account_edit_section_to_edit_first_existing_account()[0m
+  [32mAnd [0m[32mClick on edit button to edit first existing account[0m           [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_edit_button_to_edit_first_existing_account()[0m
+  [32mAnd [0m[32mClear account text box to edit first existing account[0m         [90m# com.metlife.stepsdefinition.EditAddAccountSection.clear_account_text_box_to_edit_first_existing_account()[0m
+  [32mAnd [0m[32mEnter [0m[32m[1m"Dev2Account"[0m[32m to edit first existing account[0m            [90m# com.metlife.stepsdefinition.EditAddAccountSection.enter_to_edit_first_existing_account(java.lang.String)[0m
+  [32mAnd [0m[32mClick on save button to update first account[0m                  [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_save_button_to_update_first_account()[0m
+  [32mAnd [0m[32mClick on new button to create second account[0m                  [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_new_button_to_create_second_account()[0m
+  [32mAnd [0m[32mEnter [0m[32m[1m"Dev3Account"[0m[32m to create second account[0m                  [90m# com.metlife.stepsdefinition.EditAddAccountSection.enter_to_create_second_account(java.lang.String)[0m
+  [32mAnd [0m[32mClick on save button to save second account[0m                   [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_save_button_to_save_second_account()[0m
+  [32mAnd [0m[32mClose second account window[0m                                   [90m# com.metlife.stepsdefinition.EditAddAccountSection.close_second_account_window()[0m
+  [32mAnd [0m[32mClick on new button to create third account[0m                   [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_new_button_to_create_third_account()[0m
+  [32mAnd [0m[32mEnter [0m[32m[1m"Dev4Account"[0m[32m to create third account[0m                   [90m# com.metlife.stepsdefinition.EditAddAccountSection.enter_to_create_third_account(java.lang.String)[0m
+  [32mAnd [0m[32mClick on save button to save third account[0m                    [90m# com.metlife.stepsdefinition.EditAddAccountSection.click_on_save_button_to_save_third_account()[0m
+  [32mAnd [0m[32mClose third account window[0m                                    [90m# com.metlife.stepsdefinition.EditAddAccountSection.close_third_account_window()[0m
+  [32mThen [0m[32mRefresh the browser to view updated and new created accounts[0m [90m# com.metlife.stepsdefinition.EditAddAccountSection.refresh_the_browser_to_view_updated_and_new_created_accounts()[0m
+
+@Main @Scenario7
+Scenario: Navigate to Home section to view updated records in Recent Records section [90m# src/test/java/com/metlife/features/Commerce.feature:60[0m
+  [32mWhen [0m[32mClick on Task Menu to see Home option so as to view updated recent records[0m    [90m# com.metlife.stepsdefinition.ViewUpdatedRecentRecordsSection.click_on_task_menu_to_see_home_option_so_as_to_view_updated_recent_records()[0m
+  [32mAnd [0m[32mClick on Home option to see all updated recent records[0m                         [90m# com.metlife.stepsdefinition.ViewUpdatedRecentRecordsSection.click_on_home_option_to_see_all_updated_recent_records()[0m
+  [32mAnd [0m[32mClick on View All Recent Records link to view updated recent records[0m           [90m# com.metlife.stepsdefinition.ViewUpdatedRecentRecordsSection.click_on_view_all_recent_records_link_to_view_updated_recent_records()[0m
+  [32mThen [0m[32mClose updated recent records window[0m                                           [90m# com.metlife.stepsdefinition.ViewUpdatedRecentRecordsSection.close_updated_recent_records_window()[0m
+
+@Main @Scenario8
+Scenario: View accounts' detail by hovering on a account in Recent Records section [90m# src/test/java/com/metlife/features/Commerce.feature:67[0m
+  [32mWhen [0m[32mHover on an account in Recent Records section[0m                               [90m# com.metlife.stepsdefinition.HoverOnAccountInRecentRecordsSection.hover_on_an_account_in_recent_records_section()[0m
+  [32mThen [0m[32mRefresh the browser window[0m                                                  [90m# com.metlife.stepsdefinition.HoverOnAccountInRecentRecordsSection.refresh_the_browser_window()[0m
+
+@Main @Scenario9
+Scenario: View accounts' detail by clicking on a account in Recent Records section [90m# src/test/java/com/metlife/features/Commerce.feature:72[0m
+  [32mWhen [0m[32mClick on an account in Recent Records section[0m                               [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_an_account_in_recent_records_section()[0m
+  [32mAnd [0m[32mClick on new contact button[0m                                                  [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_new_contact_button()[0m
+  [32mAnd [0m[32mChoose salutation to edit contact[0m                                            [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.choose_salutation_to_edit_contact()[0m
+  [32mAnd [0m[32mEnter [0m[32m[1m"Fahad"[0m[32m lastname[0m                                                       [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.enter_lastname(java.lang.String)[0m
+  [32mAnd [0m[32mClick on save button to save contact[0m                                         [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_save_button_to_save_contact()[0m
+  [31mAnd [0m[31mClick on details tab[0m                                                         [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_details_tab()[0m
+      [31morg.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: (//a[@id='detailTab__item'])[2]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.metlife.Utility.WebDriverUtils.clickDetailsTabRecentRecords(WebDriverUtils.java:265)
+	at com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_details_tab(ClickOnAccountInRecentRecordsSection.java:37)
+	at ✽.Click on details tab(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:78)
+[0m
+  [36mAnd [0m[36mClick on edit to edit mobile number[0m                                          [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_edit_to_edit_mobile_number()[0m
+  [36mAnd [0m[36mEnter mobile number [0m[36m[1m"987654321"[0m                                              [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.enter_mobile_number(java.lang.String)[0m
+  [36mAnd [0m[36mClick on save button to save mobile number[0m                                   [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.click_on_save_button_to_save_mobile_number()[0m
+  [36mAnd [0m[36mClose updated contact window[0m                                                 [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.close_updated_contact_window()[0m
+  [36mThen [0m[36mQuit updated contact window[0m                                                 [90m# com.metlife.stepsdefinition.ClickOnAccountInRecentRecordsSection.quit_updated_contact_window()[0m
+
+@Main @Scenario10
+Scenario: Validate account search functionality in Accounts section  [90m# src/test/java/com/metlife/features/Commerce.feature:86[0m
+  [31mAnd [0m[31mClick on Task Menu to go to Accounts page to search an account[0m [90m# com.metlife.stepsdefinition.AccountSearchFeature.click_on_task_menu_to_go_to_accounts_page_to_search_an_account()[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3524a345182416f2f15ab007475a0b1c, findElement {value=//button[@title='Show Navigation Menu'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\fkhan36\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64193/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3524a345182416f2f15ab007475a0b1c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.metlife.Utility.WebDriverUtils.clickTaskMenuAccountSearch(WebDriverUtils.java:291)
+	at com.metlife.stepsdefinition.AccountSearchFeature.click_on_task_menu_to_go_to_accounts_page_to_search_an_account(AccountSearchFeature.java:12)
+	at ✽.Click on Task Menu to go to Accounts page to search an account(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:87)
+[0m
+  [36mAnd [0m[36mClick on Accounts option to search accounts[0m                    [90m# com.metlife.stepsdefinition.AccountSearchFeature.click_on_accounts_option_to_search_accounts()[0m
+  [36mAnd [0m[36mSearch [0m[36m[1m"Dev2Account"[0m[36m for first account on Accounts page[0m        [90m# com.metlife.stepsdefinition.AccountSearchFeature.search_for_first_account_on_accounts_page(java.lang.String)[0m
+  [36mAnd [0m[36mClear search text for first account[0m                            [90m# com.metlife.stepsdefinition.AccountSearchFeature.clear_search_text_for_first_account()[0m
+  [36mAnd [0m[36mSearch [0m[36m[1m"Dev3Account"[0m[36m for second account on Accounts page[0m       [90m# com.metlife.stepsdefinition.AccountSearchFeature.search_for_second_account_on_accounts_page(java.lang.String)[0m
+  [36mAnd [0m[36mClear search text for second account[0m                           [90m# com.metlife.stepsdefinition.AccountSearchFeature.clear_search_text_for_second_account()[0m
+  [36mThen [0m[36mRefresh the browser to view all accounts[0m                      [90m# com.metlife.stepsdefinition.AccountSearchFeature.refresh_the_browser_to_view_all_accounts()[0m
+
+@Main @Scenario11
+Scenario: Deletion of a account in Accounts section        [90m# src/test/java/com/metlife/features/Commerce.feature:96[0m
+  [31mWhen [0m[31mClick on account check box[0m                          [90m# com.metlife.stepsdefinition.DeleteAccountFeature.click_on_account_check_box()[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3524a345182416f2f15ab007475a0b1c, findElement {value=(//div[@class='slds-grid slds-grid--align-spread slds-align_absolute-center checkbox-container slds-checkbox uiInput forceVirtualCheckbox uiInput--default'])[3], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\fkhan36\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64193/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3524a345182416f2f15ab007475a0b1c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.metlife.Utility.WebDriverUtils.clickAccountCheckBox1(WebDriverUtils.java:326)
+	at com.metlife.stepsdefinition.DeleteAccountFeature.click_on_account_check_box(DeleteAccountFeature.java:12)
+	at ✽.Click on account check box(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:97)
+[0m
+  [36mAnd [0m[36mClick on account edit section[0m                        [90m# com.metlife.stepsdefinition.DeleteAccountFeature.click_on_account_edit_section()[0m
+  [36mAnd [0m[36mClick on delete button appeared to delete an account[0m [90m# com.metlife.stepsdefinition.DeleteAccountFeature.click_on_delete_button_appeared_to_delete_an_account()[0m
+  [36mThen [0m[36mClick on delete button again to delete an account[0m   [90m# com.metlife.stepsdefinition.DeleteAccountFeature.click_on_delete_button_again_to_delete_an_account()[0m
+
+@Main @Scenario12
+Scenario: Validate user's navigation to Contacts module      [90m# src/test/java/com/metlife/features/Commerce.feature:103[0m
+  [31mWhen [0m[31mClick on Task Menu to see Contacts option[0m             [90m# com.metlife.stepsdefinition.NavigateToContactSection.click_on_task_menu_to_see_contacts_option()[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3524a345182416f2f15ab007475a0b1c, findElement {value=//button[@title='Show Navigation Menu'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\fkhan36\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64193/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3524a345182416f2f15ab007475a0b1c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.metlife.Utility.WebDriverUtils.clickTaskMenuToSeeContact(WebDriverUtils.java:342)
+	at com.metlife.stepsdefinition.NavigateToContactSection.click_on_task_menu_to_see_contacts_option(NavigateToContactSection.java:12)
+	at ✽.Click on Task Menu to see Contacts option(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:104)
+[0m
+  [36mThen [0m[36mClick on Contacts option to navigate to Contacts page[0m [90m# com.metlife.stepsdefinition.NavigateToContactSection.click_on_contacts_option_to_navigate_to_contacts_page()[0m
+
+@Main @Scenario13
+Scenario: Validate creation of new contact in Contacts section [90m# src/test/java/com/metlife/features/Commerce.feature:108[0m
+  [31mWhen [0m[31mRefresh the browser on Contacts page[0m                    [90m# com.metlife.stepsdefinition.CreateContactSection.refresh_the_browser_on_contacts_page()[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3524a345182416f2f15ab007475a0b1c, refresh {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\fkhan36\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64193/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3524a345182416f2f15ab007475a0b1c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:1074)
+	at com.metlife.Utility.WebDriverUtils.refreshBrowserContactsPage1(WebDriverUtils.java:350)
+	at com.metlife.stepsdefinition.CreateContactSection.refresh_the_browser_on_contacts_page(CreateContactSection.java:12)
+	at ✽.Refresh the browser on Contacts page(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:109)
+[0m
+  [36mWhen [0m[36mClick on create new contact button on Contacts page[0m     [90m# com.metlife.stepsdefinition.CreateContactSection.click_on_create_new_contact_button_on_contacts_page()[0m
+  [36mAnd [0m[36mChoose salutation[0m                                        [90m# com.metlife.stepsdefinition.CreateContactSection.choose_salutation()[0m
+  [36mAnd [0m[36mEnter [0m[36m[1m"Firdous"[0m[36m lastname on Contacts page[0m                [90m# com.metlife.stepsdefinition.CreateContactSection.enter_lastname_on_contacts_page(java.lang.String)[0m
+  [36mAnd [0m[36mClick on save button to save new contact[0m                 [90m# com.metlife.stepsdefinition.CreateContactSection.click_on_save_button_to_save_new_contact()[0m
+  [36mAnd [0m[36mClose new created contact window[0m                         [90m# com.metlife.stepsdefinition.CreateContactSection.close_new_created_contact_window()[0m
+  [36mThen [0m[36mRefresh the browser to view new created contact[0m         [90m# com.metlife.stepsdefinition.CreateContactSection.refresh_the_browser_to_view_new_created_contact()[0m
+
+@Main @Scenario14
+Scenario: Validate ListView and IntelligenceView display on Contacts window [90m# src/test/java/com/metlife/features/Commerce.feature:118[0m
+  [31mWhen [0m[31mClick on ListView button on Contacts window[0m                          [90m# com.metlife.stepsdefinition.ListIntelligenceViewSection.click_on_list_view_button_on_contacts_window()[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3524a345182416f2f15ab007475a0b1c, findElement {value=//button[text()='List View'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\fkhan36\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64193/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3524a345182416f2f15ab007475a0b1c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.metlife.Utility.WebDriverUtils.clickListView(WebDriverUtils.java:382)
+	at com.metlife.stepsdefinition.ListIntelligenceViewSection.click_on_list_view_button_on_contacts_window(ListIntelligenceViewSection.java:12)
+	at ✽.Click on ListView button on Contacts window(file:///C:/Users/fkhan36/IdeaProjects/TechProject/src/test/java/com/metlife/features/Commerce.feature:119)
+[0m
+  [36mThen [0m[36mClick on IntelligenceView button on Contacts window[0m                  [90m# com.metlife.stepsdefinition.ListIntelligenceViewSection.click_on_intelligence_view_button_on_contacts_window()[0m
+
+@Main @Scenario15
+Scenario: Mark a contact as important and unimportant in Contacts section [90m# src/test/java/com/metlife/features/Commerce.feature:123[0m
